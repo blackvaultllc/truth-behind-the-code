@@ -90,7 +90,7 @@ function CodeRain() {
         context.font = '14px "Share Tech Mono", monospace';
         context.fillStyle = "rgba(0, 255, 65, 0.23)";
         columns.forEach((y, index) => {
-          context.fillText(glyphs[Math.floor(Math.random() * glyphs.length)], index * 22, y * 20);
+          context.fillText(glyphs.charAt(Math.floor(Math.random() * glyphs.length)), index * 22, y * 20);
           columns[index] = y * 20 > window.innerHeight && Math.random() > 0.985 ? 0 : y + 0.7;
         });
       }
